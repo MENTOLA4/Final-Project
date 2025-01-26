@@ -1,0 +1,30 @@
+<title>FINAL</title>
+    
+    
+    
+
+    <div class="panel-size">
+        <h1>დაკონვერტირე უკეთესი კურსით</h1>
+        <div class="bg-gray loan-panel">
+             <div class="left-container">
+                    <section *ngIf="form" class="container">
+                        <main [formGroup]="form">
+                          <div>
+                            <input class="input-1" type="number" formControlName="first">
+                            <select formControlName="firstCurr" >
+                              <option *ngFor="let item of currencies" [value]="item.code">{{item.name}}</option>
+                            </select>
+                          </div>
+                          <div>
+                            <input class="input-2" type="number" formControlName="second">
+                            <select formControlName="secondCurr">
+                              <option  *ngFor="let item of currencies" [value]="item.code">{{item.name}}</option>
+                            </select>
+                          </div>
+                        </main>
+                    </section> 
+        </div> 
+          
+    </div>
+
+ 
