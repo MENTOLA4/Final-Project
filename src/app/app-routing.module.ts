@@ -4,16 +4,17 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
 
    {
-    path: 'login',
-    loadChildren: () => import('./login/login.module').then(m => m.LoginModule),
+    path: 'auth',
+    loadChildren: () => import('./features/auth/auth.module').then(m => m.AuthModule)
    },
-
    {
     path: 'currency',
-    loadChildren: () => import('./currency/currency.module').then(m => m.CurrencyModule),
-
+    loadChildren: () => import('./features/currency/currency.module').then(m => m.CurrencyModule),
    },
-
+   {
+    path: 'home',
+    loadChildren: () => import('./features/home/home.module').then(m => m.HomeModule),
+   },
    {
     path: '',
     redirectTo: 'login',
