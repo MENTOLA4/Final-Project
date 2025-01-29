@@ -1,13 +1,14 @@
-import { Injectable } from '@angular/core';
+import { Inject, Injectable } from '@angular/core';
 import { CanLoad, GuardResult, MaybeAsync, Route, Router, UrlSegment } from '@angular/router';
 import { UserService } from '../services/user.service';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthGuard implements CanLoad {
 
-  constructor(private userService: UserService, private router: Router) { }
+  constructor(private router: Router, private userService: UserService) { }
 
   canLoad(route: Route, segments: UrlSegment[]): MaybeAsync<GuardResult> {
     console.log(this.userService.isLoggedIn)
