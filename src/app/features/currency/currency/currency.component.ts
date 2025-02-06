@@ -28,13 +28,13 @@ export class CurrencyComponent implements OnInit {
 
   ngOnInit(): void {
       this.form.controls['first'].valueChanges.pipe(
-        debounceTime(3000)
+        debounceTime(1000)
       ).subscribe(val => {
         this.getExchangeRate(this.form.value.firstCurr, this.form.value.secondCurr, true);
       })
 
       this.form.controls['second'].valueChanges.pipe(
-        debounceTime(3000)
+        debounceTime(1000)
       ).subscribe(val => {
         this.getExchangeRate(this.form.value.secondCurr, this.form.value.firstCurr, false);
       })

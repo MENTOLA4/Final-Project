@@ -6,7 +6,7 @@ import { map, of, tap } from 'rxjs';
   providedIn: 'root'
 })
 export class CurrencyService {
-  URL: string = 'https://api.currencyapi.com/v3/latest?apikey=cur_live_Xrp9OkHiLxvTvAy3qGbxyPKNJ7nr3ZWMIOy3EE4Z&currencies=EUR%2CUSD%2CCAD'
+  URL: string = 'https://api.currencyapi.com/v3/'
   currencies: any[] = [];
 
 
@@ -34,7 +34,7 @@ export class CurrencyService {
     const url = this.URL + 'latest' + '?base_currency='+baseCurr+'&currencies='+targetCurr;
 
     return this.http.get<{data: any}>(url).pipe(
-      map(val => Object.keys(val.data).map(key => val.data[key])[0])
+      map(val => Object.keys(val.data).map(key => val.data[key].value)[0])
     );
   }
 }
