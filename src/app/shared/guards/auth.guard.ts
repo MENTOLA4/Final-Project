@@ -8,7 +8,7 @@ import { UserService } from '../services/user.service';
 })
 export class AuthGuard implements CanLoad {
 
-  constructor(private router: Router, private userService: UserService) { }
+  constructor(private router: Router, private userService:UserService ) { }
 
   canLoad(route: Route, segments: UrlSegment[]): MaybeAsync<GuardResult> {
     console.log(this.userService.isLoggedIn)

@@ -1,0 +1,27 @@
+
+.navigation{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+
+}
+.navigation-2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+a{
+    font-size: 25px;
+    color: black;
+    text-decoration: none;
+
+}

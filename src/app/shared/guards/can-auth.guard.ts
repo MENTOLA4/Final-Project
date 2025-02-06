@@ -8,7 +8,7 @@ import { UserService } from '../services/user.service';
 })
 export class CanAuthGuard implements CanLoad, CanActivate {
 
-  constructor(private userService: UserService, private router: Router) { }
+  constructor(private userService:UserService, private router: Router) { }
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): MaybeAsync<GuardResult> {
     if (this.userService.isLoggedIn) {
       this.router.navigate(['home']);

@@ -6,7 +6,7 @@ import { map, of, tap } from 'rxjs';
   providedIn: 'root'
 })
 export class CurrencyService {
-  URL: string = 'https://api.freecurrencyapi.com/v1/'
+  URL: string = 'https://api.currencyapi.com/v3/latest?apikey=cur_live_Xrp9OkHiLxvTvAy3qGbxyPKNJ7nr3ZWMIOy3EE4Z&currencies=EUR%2CUSD%2CCAD'
   currencies: any[] = [];
 
 
